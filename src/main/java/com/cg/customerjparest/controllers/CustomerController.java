@@ -65,8 +65,8 @@ public class CustomerController {
 
 	    @GetMapping("/by/name/{name}")
 	    public List<CustomerDetails> findStudentByName(@PathVariable("name") String name) {
-	        List<Customer> students = service.findByName(name);
-	        List<CustomerDetails> response = toDetails(students);
+	        List<Customer> customers = service.findByName(name);
+	        List<CustomerDetails> response = toDetails(customers);
 	        return response;
 	    }
 
